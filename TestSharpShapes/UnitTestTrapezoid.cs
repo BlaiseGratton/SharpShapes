@@ -63,7 +63,7 @@ namespace TestSharpShapes
         public void TestBiggerTrapezoidArea()
         {
             Trapezoid trapezoid = new Trapezoid(10, 9, 8);
-            Assert.AreEqual(81, trapezoid.Area());
+            Assert.AreEqual(76, trapezoid.Area());
         }
 
         [TestMethod]
@@ -86,8 +86,8 @@ namespace TestSharpShapes
             Trapezoid trapezoid = new Trapezoid(8, 2, 4);
             trapezoid.Scale(200);
             Assert.AreEqual(16, trapezoid.LongBase);
-            Assert.AreEqual(8, trapezoid.ShortBase);
-            Assert.AreEqual(4, trapezoid.Height);
+            Assert.AreEqual(4, trapezoid.ShortBase);
+            Assert.AreEqual(8, trapezoid.Height);
         }
 
         [TestMethod]
