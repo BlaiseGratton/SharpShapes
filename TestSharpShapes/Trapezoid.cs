@@ -7,27 +7,28 @@ namespace SharpShapes
 {
     class Trapezoid : Quadrilateral
     {
-        private int p1;
-        private int p2;
-        private int p3;
+        public decimal LongBase { get; private set; }
+        public decimal ShortBase { get; private set; }
+        public decimal Height { get; private set; }
+        public decimal AcuteAngle { get; private set; }
+        public decimal ObtuseAngle { get; private set; }
 
-        public Trapezoid(int p1, int p2, int p3)
+        public Trapezoid(int longBase, int shortBase, int height)
         {
-            // TODO: Complete member initialization
-            this.p1 = p1;
-            this.p2 = p2;
-            this.p3 = p3;
+            if (height <= 0 || longBase <= 0 || shortBase <= 0 || longBase <= shortBase)
+            {
+                throw new ArgumentException();
+            }
+            this.LongBase = longBase;
+            this.ShortBase = shortBase;
+            this.Height = height;
+
+            decimal wingLength = (LongBase - ShortBase) / 2;
+            this.AcuteAngle = Decimal.Round((decimal)(Math.Atan((double)(Height/wingLength)) * (180 / Math.PI)), 2);
+            this.ObtuseAngle = 180 - AcuteAngle;
         }
 
-        public object LongBase { get; set; }
-
-        public object ShortBase { get; set; }
-
-        public object Height { get; set; }
-
-        public object AcuteAngle { get; set; }
-
-        public object ObtuseAngle { get; set; }
+       
 
         public override void Scale(int percent)
         {

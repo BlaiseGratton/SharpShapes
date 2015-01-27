@@ -19,9 +19,9 @@ namespace TestSharpShapes
         [TestMethod]
         public void TestTrapezoidConstructorAngles()
         {
-            Trapezoid trapezoid = new Trapezoid(20, 15, 2);
-            Assert.AreEqual(38.66, trapezoid.AcuteAngle);
-            Assert.AreEqual(141.34, trapezoid.ObtuseAngle);
+            Trapezoid trapezoid = new Trapezoid(8, 4, 2);
+            Assert.AreEqual(45, trapezoid.AcuteAngle);
+            Assert.AreEqual(135, trapezoid.ObtuseAngle);
         }
 
         [TestMethod]
