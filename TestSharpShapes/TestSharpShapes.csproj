@@ -51,8 +51,6 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Square.cs" />
-    <Compile Include="Trapezoid.cs" />
     <Compile Include="UnitTestTrapezoid.cs" />
     <Compile Include="UnitTestSquares.cs" />
     <Compile Include="UnitTestRectangles.cs" />

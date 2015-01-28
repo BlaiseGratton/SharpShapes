@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SharpShapes
 {
-    class Trapezoid : Quadrilateral
+    public class Trapezoid : Quadrilateral
     {
         public decimal LongBase { get; private set; }
         public decimal ShortBase { get; private set; }
