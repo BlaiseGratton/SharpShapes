@@ -11,6 +11,11 @@ namespace TestSharpShapes
     {
         public class MyShape : Shape
         {
+            public override void DrawOnto(System.Windows.Controls.Canvas ShapeCanvas, int x, int y)
+            {
+                throw new NotImplementedException();
+            } 
+
             public override int SidesCount 
             { 
                 get { throw new NotImplementedException(); } 

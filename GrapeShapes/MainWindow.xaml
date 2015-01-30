@@ -9,7 +9,7 @@
                 <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100" Margin="10" x:Name="Argument1"/>
                 <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" Width="100" Text="" VerticalAlignment="Top" Margin="10" x:Name="Argument2"/>
                 <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" Margin="10" Width="100" Text="" VerticalAlignment="Top" x:Name="Argument3"/>
-                <Button Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10"/>
+                <Button Content="Shape Up!" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10" Click="Button_Click"/>
             </StackPanel>
             <Canvas Name="ShapeCanvas" HorizontalAlignment="Left" Height="505" VerticalAlignment="Top" Width="570" Background="#FFF6F6F6"/>
         </StackPanel>

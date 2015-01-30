@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace SharpShapes
 {
@@ -56,6 +53,11 @@ namespace SharpShapes
             double squares = (double)((WingLength() * WingLength()) + (Height * Height));
             decimal legLength = Decimal.Round((decimal)Math.Sqrt(squares));
             return LongBase + ShortBase + 2 * legLength;
+        }
+
+        public override void DrawOnto(System.Windows.Controls.Canvas ShapeCanvas, int x, int y)
+        {
+            throw new NotImplementedException();
         }
     }
 }
