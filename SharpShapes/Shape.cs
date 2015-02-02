@@ -1,5 +1,5 @@
 ﻿using System.Windows.Controls;
-using System.Drawing;
+using System.Windows.Media;
 
 namespace SharpShapes
 {
@@ -8,12 +8,12 @@ namespace SharpShapes
         /// <summary>
         /// The color of the interior of the shape.
         /// </summary>
-        public Color FillColor { get; set; }
+        public SolidColorBrush FillColor { get; set; }
 
         /// <summary>
         /// The color of the border of the shape when drawn.
         /// </summary>
-        public Color BorderColor { get; set; }
+        public SolidColorBrush BorderColor { get; set; }
 
         /// <summary>
         /// The number of sides of this shape.
@@ -22,8 +22,8 @@ namespace SharpShapes
 
         public Shape()
         {
-            BorderColor = Color.Tomato;
-            FillColor = Color.Bisque;
+            BorderColor = new SolidColorBrush(Colors.Tomato);
+            FillColor = new SolidColorBrush(Colors.Bisque);
         }
 
         /// <summary>

@@ -56,12 +56,8 @@ namespace SharpShapes
         {
 
             System.Windows.Shapes.Polygon myPolygon = new System.Windows.Shapes.Polygon();
-            SolidColorBrush border = new SolidColorBrush();
-            border.Color = Color.FromArgb(this.BorderColor.A, this.BorderColor.R, this.BorderColor.G, this.BorderColor.B);
-            SolidColorBrush fill = new SolidColorBrush();
-            fill.Color = Color.FromArgb(this.FillColor.A, this.FillColor.R, this.FillColor.G, this.FillColor.B);
-             myPolygon.Stroke = border;
-             myPolygon.Fill = fill;
+            myPolygon.Stroke = this.BorderColor;
+            myPolygon.Fill = this.FillColor;
             myPolygon.StrokeThickness = 2;
             myPolygon.HorizontalAlignment = HorizontalAlignment.Left;
             myPolygon.VerticalAlignment = VerticalAlignment.Center;

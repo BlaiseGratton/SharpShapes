@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Windows;
+using System.Windows.Media;
 
 namespace SharpShapes
 {
@@ -57,7 +59,25 @@ namespace SharpShapes
 
         public override void DrawOnto(System.Windows.Controls.Canvas ShapeCanvas, int x, int y)
         {
-            throw new NotImplementedException();
+            System.Windows.Shapes.Polygon myPolygon = new System.Windows.Shapes.Polygon();
+            myPolygon.Stroke = this.BorderColor;
+            myPolygon.Fill = this.FillColor;
+            myPolygon.StrokeThickness = 2;
+            myPolygon.HorizontalAlignment = HorizontalAlignment.Left;
+            myPolygon.VerticalAlignment = VerticalAlignment.Center;
+            Point point1 = new Point(x + (double)((this.LongBase-this.ShortBase)/2), y);
+            Point point2 = new Point(x, y + (double)this.Height);
+            Point point3 = new Point(x + (double)(this.LongBase), y + (double)this.Height);
+            Point point4 = new Point(x + (double)(this.LongBase-((this.LongBase-this.ShortBase)/2)), y);
+
+            PointCollection myPointCollection = new PointCollection();
+            myPointCollection.Add(point1);
+            myPointCollection.Add(point2);
+            myPointCollection.Add(point3);
+            myPointCollection.Add(point4);
+
+            myPolygon.Points = myPointCollection;
+            ShapeCanvas.Children.Add(myPolygon);
         }
     }
 }
